@@ -10,8 +10,13 @@ export class ChartService {
   
 
   getBarChartData() {
-    return this.http.get(this.url);
+    return this.http.get(this.url+ 'bar/graph/');
+
   }
 
+  getPieChartData() {
+    return this.http.get(this.url + "pie/chart/");
+
+  }
   constructor(private http: Http) { }
 }

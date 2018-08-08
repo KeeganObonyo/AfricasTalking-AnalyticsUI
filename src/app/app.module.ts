@@ -1,3 +1,4 @@
+import { ChartService } from './chart.service';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,6 +9,7 @@ import { AppComponent } from './app.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { HttpModule } from '@angular/http';
+import 'rxjs';
 
 
 @NgModule({
@@ -22,7 +24,7 @@ import { HttpModule } from '@angular/http';
     ChartsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ChartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

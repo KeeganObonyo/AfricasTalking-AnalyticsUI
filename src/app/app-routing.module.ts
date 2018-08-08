@@ -5,6 +5,10 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 
 const routes: Routes = [
     {
+        path: '',
+        component: PieChartComponent
+    },
+    {
         path: 'piechart',
         component: PieChartComponent
     },

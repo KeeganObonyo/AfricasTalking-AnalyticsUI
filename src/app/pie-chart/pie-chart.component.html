@@ -1,8 +1,11 @@
-<div style="display: block">
-  <canvas baseChart 
-  [data]="pieChartData" 
-  [labels]="pieChartLabels" 
-  [chartType]="pieChartType" 
-  (chartHover)="chartHovered($event)"
-  (chartClick)="chartClicked($event)"></canvas>
+<div *ngIf="loading">
+  <img src="assets/loading.gif" alt="Loader" class="img-fluid mx-auto d-block" style="margin-top: 40%">
+</div>
+
+<div *ngIf="loading==false">
+  <h4>Public repo language share on AT github</h4>
+  <div style="display: block">
+    <canvas baseChart [data]="pieChartData" [labels]="chartLabels" [chartType]="pieChartType" [colors]="pieChartColor" (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"></canvas>
+  </div>
 </div>

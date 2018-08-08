@@ -1,13 +1,13 @@
+<div *ngIf="loading">
+  <img src="assets/loading.gif" alt="Loader" class="img-fluid mx-auto d-block" style="margin-top: 40%">
+</div>
+
+<div *ngIf="loading==false">
 <h4>Public repo commits on AT github</h4>
 <div>
   <div style="display: block">
-    <canvas baseChart [datasets]="barChartData" 
-      [labels]="barChartLabels" 
-      [options]="barChartOptions" 
-      [legend]="barChartLegend"
-      [chartType]="barChartType" 
-      (chartHover)="chartHovered($event)" 
-      (chartClick)="chartClicked($event)"></canvas>
+    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+      [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
   </div>
-  <button (click)="randomize()">Update</button>
+</div>
 </div>
