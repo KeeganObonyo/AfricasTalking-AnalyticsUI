@@ -1,8 +1,6 @@
-<div *ngIf="loading">
-  <img src="assets/loading.gif" alt="Loader" class="img-fluid mx-auto d-block" style="margin-top: 40%">
-</div>
+<!--  -->
 
-<div *ngIf="loading==false">
+<div>
   <h4>Public repo language share on AT github</h4>
   <div style="display: block">
     <canvas baseChart [data]="pieChartData" [labels]="chartLabels" [chartType]="pieChartType" [colors]="pieChartColor" (chartHover)="chartHovered($event)"
